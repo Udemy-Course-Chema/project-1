@@ -156,6 +156,35 @@ En Escritorio
   transform: rotate(-405deg);
 }
 
+/**
+* TODO: BANNER
+*/
+#banner{
+  width: 90%;
+  margin: 9px auto;
+  height: 80px;
+  border: 9px solid white;
+  box-shadow: 0 0 4px #2b3bea;
+  /* background-color: rgba(86, 63, 235, 0.574); */
+  background-image: radial-gradient(closest-corner at 86% 47%, #f83217 23%,#ffff27 90%,  #3125d6 120%);
+  /* background-image: radial-gradient(circle, #f83217 5%, #3125d6 ); */
+}
+#banner h1{
+  display: block;
+  margin: 21px auto;
+  width: 75%;
+  font-family: 'splash';
+  font-weight: 900;
+  font-style: italic;
+  color:white;
+  font-size: 20px;
+  text-shadow: 2px 2px 2px  #000000;
+  letter-spacing: 6px;
+}
+
+
+/* ****************************************   */
+/* TODO: CELULAR */
 @media screen and (min-width: 345px) {
   .logo h3 {
     margin-right: 25px;
@@ -163,6 +192,7 @@ En Escritorio
 }
 
 /* TABLET */
+/* TODO: TABLET */
 @media screen and (min-width: 430px) {
   #header {
     height: 120px;
@@ -184,6 +214,8 @@ En Escritorio
     margin: 38px 0 0;
   }
 }
+
+/* TODO: TABLETA */
 @media screen and (min-width: 500px) {
   .logo {
     width: 35%;

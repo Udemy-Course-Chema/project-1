@@ -37,7 +37,8 @@ body {
 .wrap {
   width: 100%;
 }
-.gear {
+.gear,
+.icon {
   font-family: "WebSymbolsRegular";
 }
 /*
@@ -159,32 +160,56 @@ En Escritorio
 /**
 * TODO: BANNER
 */
-#banner{
+#banner {
   width: 90%;
   margin: 9px auto;
   height: 80px;
   border: 9px solid white;
   box-shadow: 0 0 4px #2b3bea;
-  /* background-color: rgba(86, 63, 235, 0.574); */
-  background-image: radial-gradient(closest-corner at 86% 47%, #f83217 23%,#ffff27 90%,  #3125d6 120%);
-  /* background-image: radial-gradient(circle, #f83217 5%, #3125d6 ); */
+  background-image: radial-gradient(
+    closest-corner at 86% 47%,
+    #f83217 23%,
+    #ffff27 90%,
+    #3125d6 120%
+  );
+  transition: all 500ms;
 }
-#banner h1{
+#banner h1 {
   display: block;
   margin: 21px auto;
   width: 75%;
-  font-family: 'splash';
+  font-family: "splash";
   font-weight: 900;
   font-style: italic;
-  color:white;
+  color: white;
   font-size: 20px;
-  text-shadow: 2px 2px 2px  #000000;
+  text-shadow: 2px 2px 2px #000000;
   letter-spacing: 6px;
 }
 
+/* TODO: CARDS */
+
+.card {
+  width: 73%;
+  height: 265px;
+  float: left;
+  margin: 20px;
+  margin-top: 50px;
+  margin-left: 40px;
+  padding: 5%;
+  border: 1px solid red;
+  box-shadow: 2px 2px 4px black;
+  border-radius: 5%;
+  background-color: #fff;
+  overflow: hidden;
+}
 
 /* ****************************************   */
-/* TODO: CELULAR */
+/* ****************************************   */
+/* **************** MOBILE ****************   */
+/* ****************************************   */
+/* ****************************************   */
+/* TODO: CELULAR 345px */
 @media screen and (min-width: 345px) {
   .logo h3 {
     margin-right: 25px;
@@ -192,7 +217,7 @@ En Escritorio
 }
 
 /* TABLET */
-/* TODO: TABLET */
+/* TODO: TABLET 430px */
 @media screen and (min-width: 430px) {
   #header {
     height: 120px;
@@ -224,6 +249,14 @@ En Escritorio
 @media screen and (min-width: 650px) {
   .logo {
     width: 28%;
+  }
+  #banner {
+    background-image: radial-gradient(
+      closest-corner at 91% 52%,
+      #f83217 23%,
+      #ffff27 90%,
+      #3125d6 120%
+    );
   }
 }
 
@@ -289,10 +322,65 @@ En Escritorio
     text-decoration: none;
     transition: all 300ms;
   }
-  #menu li a:hover{
-    color:lightseagreen;
-    transform: scale(1.2,1.2);
+  #menu li a:hover {
+    color: lightseagreen;
+    transform: scale(1.2, 1.2);
+  }
+  #banner {
+    margin: 23px auto;
+    height: 115px;
+    background-image: radial-gradient(
+      closest-corner at 95% 52%,
+      #f83217 23%,
+      #ffff27 90%,
+      #3125d6 120%
+    );
+  }
+  #banner h1 {
+    width: 50%;
+    margin: 34px auto;
+    font-size: 32px;
+    text-align: center;
+  }
+  .card {
+    width: 17%;
+    height: 279px;
+    float: left;
+    margin: none;
+    margin-top: 24px;
+    margin-left: 0;
+    padding: 0;
+    cursor: pointer;
+  }
+  .card:first-child {
+    margin-left: 38px;
+  }
 
+  .card .icon {
+    display: block;
+    width: 100%;
+    height: 130px;
+    line-height: 150px;
+    text-align: center;
+    font-size: 50px;
+    margin: 0 auto;
+  }
+
+  .card .category,
+  .card .description {
+    width: 100%;
+    text-align: center;
+    
+  }
+  .card .category {
+    /* display: block; */
+    height: 50px;
+    font-size: 21px;
+    font-weight: bold;
+    color: #23ec1c;
+  }
+  .card .description {
+    font-size: 14px;
   }
 }
 /* END DESKTOP */

@@ -204,9 +204,147 @@ En Escritorio
   overflow: hidden;
 }
 
+/* ASIDE Lateral */
+#lateral {
+  width: 80%;
+  min-height: 350px;
+  float: none;
+  margin: 0 auto;
+  padding: 2% 0;
+}
+
+aside h3 {
+  width: auto;
+  display: block;
+  margin: 13px 0;
+  height: 45px;
+  background: url("../img/pxgray.png"), #fff;
+  box-shadow: 0 1px 0 #393d3f, 1px 2px 0 #393d3f, 2px 3px 0 #393d3f;
+  font-size: 25px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  padding: 0 0 0 10px;
+}
+
+#search {
+  width: 89%;
+  height: 30px;
+  margin: 10px auto;
+  /* padding: 8px; */
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 1px 1px 4px #000;
+}
+
+#lateral input[type="text"] {
+  width: 80%;
+  height: 27px;
+  padding: 0 0 0 5px;
+  border: none;
+  border-radius: 5px;
+  background-color: transparent;
+  color: #ccc;
+  transition: all 600ms;
+}
+#lateral input[type="text"]:focus {
+  color: #555;
+}
+
+#lateral input[type="button"],
+#lateral input[type="submit"] {
+  padding: 0 0 0 8px;
+  height: 30px;
+  font-size: 16px;
+  background: transparent;
+  border: none;
+  border-left: 1px solid #ccc;
+  color: #555;
+}
+
+.aside-box {
+  width: 89%;
+  height: 100%;
+  margin: 20px auto 0;
+  padding: 2px 0 0;
+  background-color: #fff;
+  border: 1px solid #000;
+  box-shadow: 0 0 1px #000, 0 3px 7px #000, 0 0 7px #76ba99 inset;
+}
+
+#login input[type="email"],
+#login input[type="password"] {
+  display: block;
+  width: 70%;
+  margin: 2px auto 0;
+  height: 30px;
+  border: 1px solid #ccc;
+  box-shadow: 1px 1px 1px #000;
+  border-radius: 5px;
+  padding: 0 0 0 15px;
+  color: gray;
+}
+#login input[type="email"]:focus,
+#login input[type="password"]:focus {
+  color: #555;
+  box-shadow: 1px 1px 1px gray inset;
+}
+#login #user,
+#login #padlock {
+  display: block;
+  margin: 10px 0;
+  text-align: center;
+}
+
+#login input[type="submit"],
+#login input[type="button"],
+#login input[type="reset"],
+#login button {
+  display: block;
+  text-align: center;
+  width: 100%;
+  height: 35px;
+  margin: 20px 0 0;
+  color: #fff;
+  background: linear-gradient(to bottom, #3eb8e5 0%, #2ca0ca 100%);
+  border: 1px solid #156785;
+  border-radius: 0;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#login a {
+  display: block;
+  text-decoration: none;
+  margin: 2% 0 2% 10%;
+  font-size: 90%;
+  color: #666;
+}
+#social_network{
+  width: 100%;
+  height: 100%;
+}
+
+#social_network .twitter,
+#social_network .facebook,
+#social_network .youtube {
+  display: block;
+  width: 33%;
+  float: left;
+}
+
+#social_network a {
+  display: block;
+  color: #000;
+  margin: 9% 0;
+  text-decoration: none;
+  font-size: 220%;
+  text-align: center;
+}
+
 /* ****************************************   */
 /* ****************************************   */
-/* **************** MOBILE ****************   */
+/* **************** RESPONSIVE DESIGN *****   */
 /* ****************************************   */
 /* ****************************************   */
 /* TODO: CELULAR 345px */
@@ -257,6 +395,22 @@ En Escritorio
       #ffff27 90%,
       #3125d6 120%
     );
+  }
+  #login input[type="submit"],
+  #login input[type="button"],
+  #login input[type="reset"],
+  #login button {
+    float: left;
+    width: 40%;
+  }
+  #login input[type="submit"],
+  #login input[type="button"],
+  #login input[type="reset"],
+  #login button {
+    float: left;
+    width: 40%;
+    margin-left: 6%;
+    margin-bottom: 20px;
   }
 }
 
@@ -370,7 +524,6 @@ En Escritorio
   .card .description {
     width: 100%;
     text-align: center;
-    
   }
   .card .category {
     /* display: block; */
@@ -381,6 +534,64 @@ En Escritorio
   }
   .card .description {
     font-size: 14px;
+  }
+  /* LATERAL */
+  #lateral {
+    float: right;
+    width: 25%;
+    min-height: 450px;
+  }
+  .aside-box {
+    height: 308px;
+  }
+  #login form {
+    margin: 19px 0 0;
+  }
+  #login input[type="email"],
+  #login input[type="password"] {
+    width: 70%;
+    padding: 0 0 7px 38px;
+    margin-top: 20px;
+  }
+  #login #user,
+  #login #padlock {
+    position: absolute;
+    margin: 12px 0 0 31px;
+  }
+  #login #padlock {
+    margin-top: 32px;
+  }
+  #login input[type="submit"]:hover,
+  #login input[type="button"]:hover,
+  #login input[type="reset"]:hover,
+  #login button {
+    box-shadow: 0 0 3px gray;
+    transition: all 400ms;
+  }
+  #login a {
+    font-size: 100%;
+  }
+  #login a:hover {
+    text-decoration: underline;
+    color: #2b3bea;
+    font-weight: bold;
+    transition: all 480ms;
+    text-shadow: 0 0 1px #333;
+  }
+
+  #social_network{
+    width: 55%;
+    height: 100%;
+  }
+  #social_network .twitter,
+  #social_network .facebook,
+  #social_network .youtube {
+    width: 100%;
+    float: none;
+  }
+
+  #social_network a {
+    font-size: 320%;
   }
 }
 /* END DESKTOP */

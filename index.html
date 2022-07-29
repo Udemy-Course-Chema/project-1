@@ -1,134 +1,210 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta
-      name="viewport"
-      content="width=device-width, user-scalable=no, initial-scale=1.0"
-    />
-    <meta charset="utf-8" />
-    <title>Project 02</title>
-    <link rel="shortcut icon" type="favicon/x-icon" href="img/supertux.png" />
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
-  </head>
-  <body>
-    <!-- HEADER -->
-    <header id="header">
-      <div class="wrap">
-        <div class="logo">
-          <span class="gear">S</span>
-          <h3>Blog</h3>
+
+<head>
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <title>Project 02</title>
+  <link rel="shortcut icon" type="favicon/x-icon" href="img/supertux.png" />
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header id="header">
+    <div class="wrap">
+      <div class="logo">
+        <span class="gear">S</span>
+        <h3>Blog</h3>
+      </div>
+      <nav id="menu">
+        <input type="checkbox" id="menu-toggle" />
+        <label for="menu-toggle" class="menu-button-container">
+          <div class="menu-button"></div>
+        </label>
+        <ul class="menu">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="clearfix"></div>
+    </div>
+  </header>
+  <!-- END HEADER -->
+  <!-- START CONTENT/WRAP -->
+  <section class="wrap wrap-content">
+    <section id="info">
+      <!-- START BANNER -->
+      <div id="banner">
+        <h1>PROJECT 02</h1>
+      </div>
+      <!-- END BANNER -->
+      <!-- START CARDS -->
+      <div id="cards">
+        <div class="card">
+          <p class="icon">H</p>
+          <h2 class="category">Desarrollo Web</h2>
+          <p class="description">
+            Tempor Lorem excepteur ut incididunt non enim.
+          </p>
         </div>
-        <nav id="menu">
-          <input type="checkbox" id="menu-toggle" />
-          <label for="menu-toggle" class="menu-button-container">
-            <div class="menu-button"></div>
-          </label>
-          <ul class="menu">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </nav>
+        <div class="card">
+          <p class="icon">_</p>
+          <h2 class="category">Linux</h2>
+          <p class="description">
+            Tempor Lorem excepteur ut incididunt non enim.
+          </p>
+        </div>
+        <div class="card">
+          <p class="icon">Z</p>
+          <h2 class="category">Base De Datos</h2>
+          <p class="description">
+            Tempor Lorem excepteur ut incididunt non enim.
+          </p>
+        </div>
+        <div class="card">
+          <p class="icon">_</p>
+          <h2 class="category">Git</h2>
+          <p class="description">
+            Tempor Lorem excepteur ut incididunt non enim.
+          </p>
+        </div>
+        <div class="card">
+          <p class="icon">B</p>
+          <h2 class="category">Desarrollo Web</h2>
+          <p class="description">
+            Tempor Lorem excepteur ut incididunt non enim.
+          </p>
+        </div>
         <div class="clearfix"></div>
       </div>
-    </header>
-    <!-- END HEADER -->
-    <!-- START CONTENT/WRAP -->
-    <section class="wrap wrap-content">
-      <section id="info">
-        <!-- START BANNER -->
-        <div id="banner">
-          <h1>PROJECT 02</h1>
+      <!-- END CARDS -->
+      <!-- START ASIDE -->
+      <aside id="lateral">
+        <h3>Search</h3>
+        <div id="search">
+          <form>
+            <input type="text" name="search" id="searching" />
+            <input class="icon" type="button" value="L" />
+          </form>
         </div>
-        <!-- END BANNER -->
-        <!-- START CARDS -->
-        <div id="cards">
-          <div class="card">
-            <p class="icon">H</p>
-            <h2 class="category">Desarrollo Web</h2>
-            <p class="description">
-              Tempor Lorem excepteur ut incididunt non enim.
-            </p>
+        <h3>Login</h3>
+        <div id="login" class="aside-box">
+          <form>
+            <label for="email" id="user" class="icon">U</label>
+            <input type="email" name="email" id="email" />
+
+            <label for="pwd" id="padlock" class="icon">w</label>
+            <input type="password" name="pwd" id="pwd" />
+
+            <input type="submit" value="Login" />
+            <input type="reset" value="Restore" />
+            <div class="clearfix"></div>
+            <a href="#">Sign in</a>
+            <a href="#">Forget your password?</a>
+          </form>
+        </div>
+
+        <h3>Social Network</h3>
+        <div id="social_network" class="aside-box">
+          <div class="twitter">
+            <a href="#" class="icon">t</a>
           </div>
-          <div class="card">
-            <p class="icon">_</p>
-            <h2 class="category">Linux</h2>
-            <p class="description">
-              Tempor Lorem excepteur ut incididunt non enim.
-            </p>
+          <div class="facebook">
+            <a href="#" class="icon">f</a>
           </div>
-          <div class="card">
-            <p class="icon">Z</p>
-            <h2 class="category">Base De Datos</h2>
-            <p class="description">
-              Tempor Lorem excepteur ut incididunt non enim.
-            </p>
-          </div>
-          <div class="card">
-            <p class="icon">_</p>
-            <h2 class="category">Git</h2>
-            <p class="description">
-              Tempor Lorem excepteur ut incididunt non enim.
-            </p>
-          </div>
-          <div class="card">
-            <p class="icon">B</p>
-            <h2 class="category">Desarrollo Web</h2>
-            <p class="description">
-              Tempor Lorem excepteur ut incididunt non enim.
-            </p>
+          <div class="youtube">
+            <a href="#" class="icon">y</a>
           </div>
           <div class="clearfix"></div>
         </div>
-        <!-- END CARDS -->
-        <!-- START ASIDE -->
-        <aside id="lateral">
-          <h3>Search</h3>
-          <div id="search">
-            <form>
-              <input type="text" name="search" id="searching" />
-              <input class="icon" type="button" value="L" />
-            </form>
-          </div>
-          <h3>Login</h3>
-          <div id="login" class="aside-box">
-            <form>
-              <label for="email" id="user" class="icon">U</label>
-              <input type="email" name="email" id="email" />
 
-              <label for="pwd" id="padlock" class="icon">w</label>
-              <input type="password" name="pwd" id="pwd" />
+        <h3>Sponsors</h3>
+        <div id="sponsors" class="aside-box"></div>
+      </aside>
+      <!-- END ASIDE -->
 
-              <input type="submit" value="Login" />
-              <input type="reset" value="Restore" />
-              <div class="clearfix"></div>
-              <a href="#">Sign in</a>
-              <a href="#">Forget your password?</a>
-            </form>
+      <!-- START ARTICLES -->
+      <section id="articles">
+        <h2>Últimas Noticias</h2>
+        <article>
+          <div class="data">
+            <span>Fecha: 28 de Julio del 2022</span>
+            <span>Categoría: Pruebas</span>
           </div>
-
-          <h3>Social Network</h3>
-          <div id="social_network" class="aside-box">
-            <div class="twitter">
-              <a href="#" class="icon">t</a>
-            </div>
-            <div class="facebook">
-              <a href="#" class="icon">f</a>
-            </div>
-            <div class="youtube">
-              <a href="#" class="icon">y</a>
-            </div>
-            <div class="clearfix"></div>
+          <h4>
+            <a href="#">Título del artículo: #1</a>
+          </h4>
+          <p>
+            Non dolore deserunt eu laborum proident enim cupidatat in laborum incididunt velit. Nulla reprehenderit
+            laborum sint minim consequat est elit. Aute sint nulla ullamco nulla velit reprehenderit ut irure labore.
+            Laborum nisi quis magna reprehenderit dolore ut culpa irure nisi deserunt. In tempor aliqua commodo occaecat
+            magna non deserunt commodo anim dolore. Officia sit esse irure ullamco pariatur officia duis velit
+            reprehenderit sint sint. Deserunt commodo pariatur cupidatat fugiat consequat aliqua fugiat deserunt sit
+            nulla pariatur deserunt.
+          </p>
+        </article>
+        <article>
+          <div class="data">
+            <span>Fecha: 6 de Junio del 2022</span>
+            <span>Categoría: Pruebas</span>
           </div>
-
-          <h3>Sponsors</h3>
-          <div id="sponsors" class="aside-box">
-            
+          <h4>
+            <a href="#">Título del artículo: #2</a>
+          </h4>
+          <p>
+            Non dolore deserunt eu laborum proident enim cupidatat in laborum incididunt velit. Nulla reprehenderit
+            laborum sint minim consequat est elit. Aute sint nulla ullamco nulla velit reprehenderit ut irure labore.
+            Laborum nisi quis magna reprehenderit dolore ut culpa irure nisi deserunt. In tempor aliqua commodo occaecat
+            magna non deserunt commodo anim dolore. Officia sit esse irure ullamco pariatur officia duis velit
+            reprehenderit sint sint. Deserunt commodo pariatur cupidatat fugiat consequat aliqua fugiat deserunt sit
+            nulla pariatur deserunt.
+          </p>
+        </article>
+        <article>
+          <div class="data">
+            <span>Fecha: 2 de Mayo del 2022</span>
+            <span>Categoría: Pruebas</span>
           </div>
-        </aside>
-        <!-- END ASIDE -->
+          <h4>
+            <a href="#">Título del artículo: #3</a>
+          </h4>
+          <p>
+            Non dolore deserunt eu laborum proident enim cupidatat in laborum incididunt velit. Nulla reprehenderit
+            laborum sint minim consequat est elit. Aute sint nulla ullamco nulla velit reprehenderit ut irure labore.
+            Laborum nisi quis magna reprehenderit dolore ut culpa irure nisi deserunt. In tempor aliqua commodo occaecat
+            magna non deserunt commodo anim dolore. Officia sit esse irure ullamco pariatur officia duis velit
+            reprehenderit sint sint. Deserunt commodo pariatur cupidatat fugiat consequat aliqua fugiat deserunt sit
+            nulla pariatur deserunt.
+          </p>
+        </article>
+        <article>
+          <div class="data">
+            <span>Fecha: 7 de Marzo del 2022</span>
+            <span>Categoría: Pruebas</span>
+          </div>
+          <h4>
+            <a href="#">Título del artículo: #4</a>
+          </h4>
+          <p>
+            Non dolore deserunt eu laborum proident enim cupidatat in laborum incididunt velit. Nulla reprehenderit
+            laborum sint minim consequat est elit. Aute sint nulla ullamco nulla velit reprehenderit ut irure labore.
+            Laborum nisi quis magna reprehenderit dolore ut culpa irure nisi deserunt. In tempor aliqua commodo occaecat
+            magna non deserunt commodo anim dolore. Officia sit esse irure ullamco pariatur officia duis velit
+            reprehenderit sint sint. Deserunt commodo pariatur cupidatat fugiat consequat aliqua fugiat deserunt sit
+            nulla pariatur deserunt.
+          </p>
+        </article>
+        <article id="blog">
+          <a href="#">Ir al blog</a>
+        </article>
+        <div class="clearfix"></div>
       </section>
+      <!-- END ARTICLES -->
     </section>
-    <!-- END CONTENT/WRAP -->
-  </body>
+  </section>
+  <!-- END CONTENT/WRAP -->
+</body>
+
 </html>

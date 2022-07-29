@@ -320,7 +320,7 @@ aside h3 {
   font-size: 90%;
   color: #666;
 }
-#social_network{
+#social_network {
   width: 100%;
   height: 100%;
 }
@@ -340,6 +340,71 @@ aside h3 {
   text-decoration: none;
   font-size: 220%;
   text-align: center;
+}
+
+/* ARTÍCULOS */
+#articles {
+  width: 80%;
+  margin: 0 auto;
+}
+
+#articles h2 {
+  display: block;
+  width: 100%;
+  margin: 4% 0;
+  height: 70px;
+  line-height: 204%;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 184%;
+  font-weight: bold;
+  letter-spacing: 2px;
+  background: url("../img/pxgray.png"), #fff;
+  text-shadow: 2px 3px 6px;
+  box-shadow: 0 0 1px #000, 0 3px 7px #000, 0 0 7px #76ba99 inset;
+}
+
+#articles article {
+  width: 100%;
+  height: 100%;
+  margin: 9% auto;
+  /* padding: 3%; */
+  color: #000;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  box-shadow: 0 0 4px #000;
+}
+
+#articles article h4 {
+  display: block;
+  font-size: 120%;
+  margin: 5% 0;
+  text-align: center;
+}
+
+#articles article h4 a{
+  text-decoration: none;
+  color:#00538c;
+}
+
+
+#articles .data{
+  /* height: 60px; */
+  background-color: #000;
+  color:#fff;
+  font-size: 73%;
+  text-align: center;
+  border-radius: 0 0 5px 5px;
+}
+#articles .data span{
+  display: block;
+}
+#articles .data span:first-child{
+  margin: 0 0 2%;
+}
+
+#articles p{
+  margin: 5% 0;
 }
 
 /* ****************************************   */
@@ -579,7 +644,7 @@ aside h3 {
     text-shadow: 0 0 1px #333;
   }
 
-  #social_network{
+  #social_network {
     width: 55%;
     height: 100%;
   }
@@ -592,6 +657,48 @@ aside h3 {
 
   #social_network a {
     font-size: 320%;
+  }
+
+  /* ARTICLES */
+  #articles {
+    width: 70%;
+    float: left;
+    padding: 0;
+  }
+  
+  #articles article {
+    margin: 5% auto;
+  }
+  #articles article:first-child{
+    background-color: green;
+  } 
+
+  #articles article .data{
+    float: right;
+    width: 30%;
+    height: 100%;
+    font-size: 69%;
+    padding: 1%;
+  }
+  #articles article h4 {
+    text-align: left;
+  }
+  #articles article h4,
+  #articles article p{
+    margin: 1% 0 0 2%;
+  }
+  #articles article h4 a:hover{
+    text-decoration: underline;
+    color: #0c1943;
+  }
+  #articles .data span:first-child{
+    margin: 0;
+  }
+
+  #articles article p{
+    margin-top: 3%;
+    margin-bottom: 3%;
+    font-size: 86%;
   }
 }
 /* END DESKTOP */

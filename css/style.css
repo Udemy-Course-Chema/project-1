@@ -71,6 +71,18 @@ En Escritorio
   font-size: 19px;
   /* font-size: 30px; */
   margin: 10px 0 5px 24px;
+  animation-name: rotation-gear;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes rotation-gear{
+  from{
+    transform: rotate(0);
+  }
+  to{
+    transform: rotate(360deg);
+  }
 }
 .logo h3 {
   display: block;
@@ -382,30 +394,125 @@ aside h3 {
   text-align: center;
 }
 
-#articles article h4 a{
+#articles article h4 a {
   text-decoration: none;
-  color:#00538c;
+  color: #00538c;
 }
 
-
-#articles .data{
+#articles .data {
   /* height: 60px; */
   background-color: #000;
-  color:#fff;
+  color: #fff;
   font-size: 73%;
   text-align: center;
   border-radius: 0 0 5px 5px;
 }
-#articles .data span{
+#articles .data span {
   display: block;
 }
-#articles .data span:first-child{
+#articles .data span:first-child {
   margin: 0 0 2%;
 }
 
-#articles p{
+#articles p {
   margin: 5% 0;
 }
+
+#blog {
+  height: 100%;
+  text-align: center;
+}
+
+#blog a {
+  display: block;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 300%;
+  color: #00538c;
+}
+
+/* FOOTER */
+#footer {
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+  overflow: hidden;
+}
+
+/* #footer > div{
+  width: 33%;
+  float:left;
+} */
+
+#footer a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #37bcf9;
+  transition: all 500ms;
+}
+
+#footer h5 {
+  display: block;
+  width: 80%;
+  margin: 2% auto 0;
+  background: url("../img/pxgray.png"), #fff;
+  height: 50px;
+  letter-spacing: 2px;
+  text-align: center;
+  color: #000;
+  font-size: 200%;
+  /* line-height: 270%; */
+  border-radius: 5px;
+}
+
+#footer ul {
+  text-align: center;
+  margin: 3%;
+  font-size: 120%;
+  list-style-type: none;
+}
+
+#footer ul li {
+  width: 50%;
+  margin: 20px auto;
+  border-color: #fff;
+  border-style: none none solid none;
+}
+#footer ul li a {
+  display: block;
+  height: 50px;
+}
+#footer iframe {
+  width: 100%;
+  margin: 12% auto;
+  height: 300px;
+  border-radius: 5px;
+  border: 5px solid #fff;
+  box-shadow: 0 0 5px #ccc;
+}
+
+#footer .html_image,
+#footer #browsers{
+  text-align: center;
+}
+
+#footer img{
+  margin: 4% 0;
+}
+
+
+#footer #browsers img{
+  width: 10%;
+}
+/* #footer img{
+  display: block;
+  margin: 4% auto;
+} */
+/* #footer #info p{
+  margin: 4% 0;
+  text-align: center;
+} */
+
 
 /* ****************************************   */
 /* ****************************************   */
@@ -665,15 +772,15 @@ aside h3 {
     float: left;
     padding: 0;
   }
-  
+
   #articles article {
     margin: 5% auto;
   }
-  #articles article:first-child{
+  #articles article:first-child {
     background-color: green;
-  } 
+  }
 
-  #articles article .data{
+  #articles article .data {
     float: right;
     width: 30%;
     height: 100%;
@@ -684,21 +791,64 @@ aside h3 {
     text-align: left;
   }
   #articles article h4,
-  #articles article p{
+  #articles article p {
     margin: 1% 0 0 2%;
   }
-  #articles article h4 a:hover{
+  #articles article h4 a:hover {
     text-decoration: underline;
     color: #0c1943;
   }
-  #articles .data span:first-child{
+  #articles .data span:first-child {
     margin: 0;
   }
 
-  #articles article p{
+  #articles article p {
     margin-top: 3%;
     margin-bottom: 3%;
     font-size: 86%;
+  }
+
+  #blog {
+    line-height: 100px;
+  }
+  #blog a:hover {
+    text-decoration: underline;
+    color: #0c1943;
+    text-shadow: 4px 3px 2px #393d3f;
+    transition: all 600ms;
+  }
+
+  #footer {
+    height: 470px;
+  }
+  #footer .wrap > div {
+    width: 30.5%;
+    float: left;
+    height: 370px;
+    margin: 10px;
+    text-align: center;
+    color: #fff;
+  }
+
+  #footer h5 {
+    width: 100%;
+  }
+
+  #footer ul {
+    text-align: left;
+  }
+
+  #footer ul li {
+    width: 100%;
+    margin: 20px 0;
+  }
+
+  #footer ul li:first-child {
+    border-bottom: none;
+  }
+
+  #footer #browsers img{
+    width: 14%;
   }
 }
 /* END DESKTOP */

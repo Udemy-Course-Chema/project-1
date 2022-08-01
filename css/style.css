@@ -5,20 +5,22 @@
   font-weight: 700;
   font-style: italic;
 }
+
 @font-face {
   font-family: "kurale";
   src: url("./fonts/Kurale/Kurale-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
   font-family: "WebSymbolsRegular";
   src: url("./fonts/websymbols-regular-webfont.ttf") format("truetype"),
     url("./fonts/websymbols-regular-webfont.eot") format("embedded-opentype"),
     url("./fonts/websymbols-regular-webfont.woff") format("woff"),
-    url("./fonts/websymbols-regular-webfont.svg#WebSymbolsRegular")
-      format("svg");
+    url("./fonts/websymbols-regular-webfont.svg#WebSymbolsRegular") format("svg");
 }
+
 /* GLOBAL */
 * {
   margin: 0;
@@ -26,21 +28,26 @@
   font-family: "kurale";
   letter-spacing: 2.5px;
 }
+
 body {
   width: 100%;
   background: url("./../img/ai_wallpaper.png") repeat-y top/90%;
 }
+
 .clearfix {
   float: none;
   clear: both;
 }
+
 .wrap {
   width: 100%;
 }
+
 .gear,
 .icon {
   font-family: "WebSymbolsRegular";
 }
+
 /*
 En Escritorio
  .wrap{
@@ -55,6 +62,7 @@ En Escritorio
   background-color: #0c1943;
   color: white;
 }
+
 .logo {
   width: 40%;
   margin: 15px 0 0 25px;
@@ -65,11 +73,13 @@ En Escritorio
   overflow: hidden;
   transition: all 300ms;
 }
+
 .logo:hover {
   border-radius: 2px;
   color: #000;
   background-color: #ccc;
 }
+
 .logo .gear {
   display: block;
   float: left;
@@ -81,24 +91,30 @@ En Escritorio
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
+
 @keyframes rotation-gear {
   from {
     transform: rotate(0);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
+
 .logo:hover .gear {
   animation: fromBelow 500ms linear;
 }
+
 @keyframes fromBelow {
   0% {
     transform: translateX(0%);
   }
+
   50% {
     transform: translateX(-200%);
   }
+
   100% {
     transform: translateX(0%);
   }
@@ -113,22 +129,27 @@ En Escritorio
   /* margin: 3px 28px 0 0; */
   transition: all 500ms;
 }
+
 .logo:hover h3 {
   animation: fromRight 400ms linear;
 }
+
 @keyframes fromRight {
   from {
     transform: translateY(200%);
   }
+
   to {
     transform: translateY(0%);
   }
 }
+
 #menu {
   float: right;
   margin: 30px 0px 0 0;
   width: 30%;
 }
+
 #menu ul li {
   display: block;
 }
@@ -138,6 +159,7 @@ En Escritorio
   display: block;
   cursor: pointer;
 }
+
 .menu {
   display: none;
   /* position: absolute;
@@ -146,32 +168,38 @@ En Escritorio
   left: 0;
   width: 100%; */
 }
-#menu-toggle ~ .menu li {
+
+#menu-toggle~.menu li {
   height: 0;
   margin: 0;
   padding: 0;
   border: 0;
   transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
 }
-#menu-toggle:checked ~ .menu {
+
+#menu-toggle:checked~.menu {
   display: block;
 }
-#menu-toggle:checked ~ .menu li {
+
+#menu-toggle:checked~.menu li {
   border: 1px solid #333;
   height: 2.5rem;
   padding: 0.5rem;
   transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
 }
-.menu > li {
+
+.menu>li {
   display: block;
   margin: 0;
   padding: 0.5em 0;
   width: 100%;
   background-color: green;
 }
-.menu > li:not(:last-child) {
+
+.menu>li:not(:last-child) {
   border-bottom: 1px solid #444;
 }
+
 .menu-button,
 .menu-button::before,
 .menu-button::after {
@@ -180,22 +208,27 @@ En Escritorio
   position: absolute;
   height: 30px;
 }
+
 .menu-button::before {
   content: "";
   margin: -8px 0 0;
 }
+
 .menu-button::after {
   content: "";
   margin: 8px 0 0;
 }
-#menu-toggle:checked + .menu-button-container .menu-button::before {
+
+#menu-toggle:checked+.menu-button-container .menu-button::before {
   margin-top: 0px;
   transform: rotate(405deg);
 }
-#menu-toggle:checked + .menu-button-container .menu-button {
+
+#menu-toggle:checked+.menu-button-container .menu-button {
   background: rgba(255, 255, 255, 0);
 }
-#menu-toggle:checked + .menu-button-container .menu-button::after {
+
+#menu-toggle:checked+.menu-button-container .menu-button::after {
   margin-top: 0px;
   transform: rotate(-405deg);
 }
@@ -209,25 +242,26 @@ En Escritorio
   height: 80px;
   border: 9px solid white;
   box-shadow: 0 0 4px #2b3bea;
-  background-image: radial-gradient(
-    closest-corner at 86% 47%,
-    #f83217 23%,
-    #ffff27 90%,
-    #3125d6 120%
-  );
+  background-image: radial-gradient(closest-corner at 86% 47%,
+      #f83217 23%,
+      #ffff27 90%,
+      #3125d6 120%);
   background-repeat: no-repeat;
   transition: all 500ms;
   animation: backBanner 800ms linear;
   overflow: hidden;
 }
+
 @keyframes backBanner {
   0% {
     background-position: -200px 80px;
   }
+
   100% {
     background-position: 0 0;
   }
 }
+
 #banner h1 {
   display: block;
   margin: 21px auto;
@@ -241,21 +275,25 @@ En Escritorio
   letter-spacing: 6px;
   animation: showText 5s linear;
 }
+
 @keyframes showText {
   0% {
     transform: translateX(200%) scale(5, 5);
     opacity: 0.1;
   }
+
   50% {
     transform: translateX(-200%) scale(5, 5);
     opacity: 1;
   }
+
   75% {
     transform: translate(100%) scale(5, 5);
     text-shadow: none;
     color: transparent;
     opacity: 0;
   }
+
   100% {
     transform: translateX(0%) scale(1, 1);
     text-shadow: 2px 2px 2px #000000;
@@ -334,6 +372,7 @@ aside h3 {
   color: #ccc;
   transition: all 600ms;
 }
+
 #lateral input[type="text"]:focus {
   color: #555;
 }
@@ -371,11 +410,13 @@ aside h3 {
   padding: 0 0 0 15px;
   color: gray;
 }
+
 #login input[type="email"]:focus,
 #login input[type="password"]:focus {
   color: #555;
   box-shadow: 1px 1px 1px gray inset;
 }
+
 #login #user,
 #login #padlock {
   display: block;
@@ -407,6 +448,7 @@ aside h3 {
   font-size: 90%;
   color: #666;
 }
+
 #social_network {
   width: 100%;
   height: 100%;
@@ -482,9 +524,11 @@ aside h3 {
   text-align: center;
   border-radius: 0 0 5px 5px;
 }
+
 #articles .data span {
   display: block;
 }
+
 #articles .data span:first-child {
   margin: 0 0 2%;
 }
@@ -553,10 +597,12 @@ aside h3 {
   border-color: #fff;
   border-style: none none solid none;
 }
+
 #footer ul li a {
   display: block;
   height: 50px;
 }
+
 #footer iframe {
   width: 100%;
   margin: 12% auto;
@@ -578,6 +624,7 @@ aside h3 {
 #footer #browsers img {
   width: 10%;
 }
+
 /* #footer img{
   display: block;
   margin: 4% auto;
@@ -605,14 +652,17 @@ aside h3 {
   #header {
     height: 120px;
   }
+
   .wrap {
     width: 85%;
     margin: 0 auto;
   }
+
   .logo {
     width: 50%;
     margin: 40px 0;
   }
+
   .logo h3 {
     font-size: 30px;
     margin-right: 25px;
@@ -629,18 +679,19 @@ aside h3 {
     width: 35%;
   }
 }
+
 @media screen and (min-width: 650px) {
   .logo {
     width: 28%;
   }
+
   #banner {
-    background-image: radial-gradient(
-      closest-corner at 91% 52%,
-      #f83217 23%,
-      #ffff27 90%,
-      #3125d6 120%
-    );
+    background-image: radial-gradient(closest-corner at 91% 52%,
+        #f83217 23%,
+        #ffff27 90%,
+        #3125d6 120%);
   }
+
   #login input[type="submit"],
   #login input[type="button"],
   #login input[type="reset"],
@@ -648,6 +699,7 @@ aside h3 {
     float: left;
     width: 40%;
   }
+
   #login input[type="submit"],
   #login input[type="button"],
   #login input[type="reset"],
@@ -671,13 +723,16 @@ aside h3 {
     width: 75%;
     margin: 0 auto;
   }
+
   .logo {
     width: 16%;
     margin: 30px 0;
   }
+
   .logo h3 {
     font-size: 35px;
   }
+
   .logo .gear {
     font-size: 30px;
     /* margin: 10px 0 5px 24px; */
@@ -688,59 +743,66 @@ aside h3 {
     /* SHOW ON DESKTOP */
     display: block;
   }
+
   #menu {
     margin: 30px 0 0;
     width: 50%;
     text-align: center;
   }
+
   #menu-toggle,
   .menu-button-container {
     display: none;
   }
+
   #menu ul li {
     display: inline;
     font-size: 35px;
     margin: 0 20px !important;
   }
-  #menu-toggle ~ .menu li {
+
+  #menu-toggle~.menu li {
     height: auto;
     padding: 1px;
     transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
   }
 
-  .menu > li {
+  .menu>li {
     /* margin: 0;
     padding: 0.5em 0; */
     display: inline;
     width: 100%;
     background-color: transparent;
   }
+
   #menu li a {
     display: inline-block;
     color: white;
     text-decoration: none;
     transition: all 300ms;
   }
+
   #menu li a:hover {
     color: lightseagreen;
     transform: scale(1.2, 1.2);
   }
+
   #banner {
     margin: 23px auto;
     height: 115px;
-    background-image: radial-gradient(
-      closest-corner at 95% 52%,
-      #f83217 23%,
-      #ffff27 90%,
-      #3125d6 120%
-    );
+    background-image: radial-gradient(closest-corner at 95% 52%,
+        #f83217 23%,
+        #ffff27 90%,
+        #3125d6 120%);
   }
+
   #banner h1 {
     width: 50%;
     margin: 34px auto;
     font-size: 32px;
     text-align: center;
   }
+
   .card {
     width: 17%;
     height: 279px;
@@ -752,6 +814,7 @@ aside h3 {
     cursor: pointer;
     transition: all 800ms;
   }
+
   .card:first-child {
     margin-left: 38px;
   }
@@ -770,10 +833,12 @@ aside h3 {
     color: #37bcf9;
     animation: showIcon 400ms linear;
   }
+
   @keyframes showIcon {
     from {
       transform: translateY(-200%);
     }
+
     to {
       transform: translateY(0);
     }
@@ -784,6 +849,7 @@ aside h3 {
     width: 100%;
     text-align: center;
   }
+
   .card .category {
     /* display: block; */
     height: 50px;
@@ -792,18 +858,22 @@ aside h3 {
     color: #23ec1c;
     transition: all 1s;
   }
+
   .card:hover .category {
     color: #fff;
     animation: showTextIcon 600ms linear;
   }
+
   @keyframes showTextIcon {
     0% {
       transform: scale(5, 5);
       color: #fff;
     }
+
     50% {
       transform: scale(8, 8);
     }
+
     100% {
       transform: scale(1, 1);
     }
@@ -823,6 +893,7 @@ aside h3 {
     0% {
       transform: translateY(200%);
     }
+
     50% {
       transform: scale(0.5, 0.5);
     }
@@ -842,26 +913,32 @@ aside h3 {
     width: 25%;
     min-height: 450px;
   }
+
   .aside-box {
     height: 308px;
   }
+
   #login form {
     margin: 19px 0 0;
   }
+
   #login input[type="email"],
   #login input[type="password"] {
     width: 70%;
     padding: 0 0 7px 38px;
     margin-top: 20px;
   }
+
   #login #user,
   #login #padlock {
     position: absolute;
     margin: 12px 0 0 31px;
   }
+
   #login #padlock {
     margin-top: 32px;
   }
+
   #login input[type="submit"]:hover,
   #login input[type="button"]:hover,
   #login input[type="reset"]:hover,
@@ -869,9 +946,11 @@ aside h3 {
     box-shadow: 0 0 3px gray;
     transition: all 400ms;
   }
+
   #login a {
     font-size: 100%;
   }
+
   #login a:hover {
     text-decoration: underline;
     color: #2b3bea;
@@ -902,12 +981,14 @@ aside h3 {
     opacity: 0;
     transition: all 400ms;
   }
+
   #social_network div:hover .overlay {
     /* display: block; */
     opacity: 1;
     transform: translateX(0%);
     /* animation: networkAnimation 500ms linear; */
   }
+
   /* @keyframes networkAnimation {
     0% {
       transform: translateX(0%);
@@ -939,6 +1020,7 @@ aside h3 {
   #articles article {
     margin: 5% auto;
   }
+
   #articles article:first-child {
     background-color: green;
   }
@@ -950,17 +1032,21 @@ aside h3 {
     font-size: 69%;
     padding: 1%;
   }
+
   #articles article h4 {
     text-align: left;
   }
+
   #articles article h4,
   #articles article p {
     margin: 1% 0 0 2%;
   }
+
   #articles article h4 a:hover {
     text-decoration: underline;
     color: #0c1943;
   }
+
   #articles .data span:first-child {
     margin: 0;
   }
@@ -973,18 +1059,50 @@ aside h3 {
 
   #blog {
     line-height: 100px;
+    transition: all 1s;
   }
+
   #blog a:hover {
     text-decoration: underline;
     color: #0c1943;
     text-shadow: 4px 3px 2px #393d3f;
-    transition: all 600ms;
+    transition: all 1s;
+    
+  }
+
+  #blog:hover {
+    border: 3px solid #b303ff;
+    background-color: #000;
+    box-shadow: 1px 1px 8px #23ec1c;
+    border-radius: 240px;
+    animation: blink 10s infinite linear;
+  }
+
+  #blog:hover a {
+    color: #23ec1c;
+    text-shadow: 1px 1px 1px #fff, 1px 2px 1px #fff;
+  }
+
+  @keyframes blink {
+    0%{
+      border:5px solid #ff7171;
+    }
+    25%{
+      border:5px solid #23ec1c;
+    }
+    50%{
+      border:5px solid #3eb8e5;
+    }
+    100%{
+      border:5px solid #7600a9;
+    }
   }
 
   #footer {
     height: 470px;
   }
-  #footer .wrap > div {
+
+  #footer .wrap>div {
     width: 30.5%;
     float: left;
     height: 370px;
@@ -1005,6 +1123,15 @@ aside h3 {
     width: 100%;
     margin: 20px 0;
   }
+  #footer ul li a{
+    transition: all 400ms;
+  }
+
+  #footer ul li:hover a{
+    padding-left: 40px;
+    color: #23ec1c;
+    font-weight: bolder;
+  }
 
   #footer ul li:first-child {
     border-bottom: none;
@@ -1014,4 +1141,5 @@ aside h3 {
     width: 14%;
   }
 }
+
 /* END DESKTOP */

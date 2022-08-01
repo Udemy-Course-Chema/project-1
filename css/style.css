@@ -65,6 +65,11 @@ En Escritorio
   overflow: hidden;
   transition: all 300ms;
 }
+.logo:hover {
+  border-radius: 2px;
+  color: #000;
+  background-color: #ccc;
+}
 .logo .gear {
   display: block;
   float: left;
@@ -76,14 +81,29 @@ En Escritorio
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
-@keyframes rotation-gear{
-  from{
+@keyframes rotation-gear {
+  from {
     transform: rotate(0);
   }
-  to{
+  to {
     transform: rotate(360deg);
   }
 }
+.logo:hover .gear {
+  animation: fromBelow 500ms linear;
+}
+@keyframes fromBelow {
+  0% {
+    transform: translateX(0%);
+  }
+  50% {
+    transform: translateX(-200%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
 .logo h3 {
   display: block;
   font-size: 23px;
@@ -92,6 +112,17 @@ En Escritorio
   margin: 3px 20px 0 0;
   /* margin: 3px 28px 0 0; */
   transition: all 500ms;
+}
+.logo:hover h3 {
+  animation: fromRight 400ms linear;
+}
+@keyframes fromRight {
+  from {
+    transform: translateY(200%);
+  }
+  to {
+    transform: translateY(0%);
+  }
 }
 #menu {
   float: right;
@@ -184,7 +215,18 @@ En Escritorio
     #ffff27 90%,
     #3125d6 120%
   );
+  background-repeat: no-repeat;
   transition: all 500ms;
+  animation: backBanner 800ms linear;
+  overflow: hidden;
+}
+@keyframes backBanner {
+  0% {
+    background-position: -200px 80px;
+  }
+  100% {
+    background-position: 0 0;
+  }
 }
 #banner h1 {
   display: block;
@@ -197,10 +239,32 @@ En Escritorio
   font-size: 20px;
   text-shadow: 2px 2px 2px #000000;
   letter-spacing: 6px;
+  animation: showText 5s linear;
+}
+@keyframes showText {
+  0% {
+    transform: translateX(200%) scale(5, 5);
+    opacity: 0.1;
+  }
+  50% {
+    transform: translateX(-200%) scale(5, 5);
+    opacity: 1;
+  }
+  75% {
+    transform: translate(100%) scale(5, 5);
+    text-shadow: none;
+    color: transparent;
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0%) scale(1, 1);
+    text-shadow: 2px 2px 2px #000000;
+    color: #fff;
+    opacity: 1;
+  }
 }
 
 /* TODO: CARDS */
-
 .card {
   width: 73%;
   height: 265px;
@@ -214,6 +278,17 @@ En Escritorio
   border-radius: 5%;
   background-color: #fff;
   overflow: hidden;
+  transition: all 300ms;
+}
+
+.card .icon {
+  display: block;
+  width: 100%;
+  height: 130px;
+  line-height: 150px;
+  text-align: center;
+  font-size: 300%;
+  margin: 0 auto;
 }
 
 /* ASIDE Lateral */
@@ -492,16 +567,15 @@ aside h3 {
 }
 
 #footer .html_image,
-#footer #browsers{
+#footer #browsers {
   text-align: center;
 }
 
-#footer img{
+#footer img {
   margin: 4% 0;
 }
 
-
-#footer #browsers img{
+#footer #browsers img {
   width: 10%;
 }
 /* #footer img{
@@ -512,7 +586,6 @@ aside h3 {
   margin: 4% 0;
   text-align: center;
 } */
-
 
 /* ****************************************   */
 /* ****************************************   */
@@ -677,12 +750,13 @@ aside h3 {
     margin-left: 0;
     padding: 0;
     cursor: pointer;
+    transition: all 800ms;
   }
   .card:first-child {
     margin-left: 38px;
   }
 
-  .card .icon {
+  /* .card .icon {
     display: block;
     width: 100%;
     height: 130px;
@@ -690,6 +764,19 @@ aside h3 {
     text-align: center;
     font-size: 50px;
     margin: 0 auto;
+  } */
+  .card:hover .icon {
+    font-size: 80px;
+    color: #37bcf9;
+    animation: showIcon 400ms linear;
+  }
+  @keyframes showIcon {
+    from {
+      transform: translateY(-200%);
+    }
+    to {
+      transform: translateY(0);
+    }
   }
 
   .card .category,
@@ -703,10 +790,52 @@ aside h3 {
     font-size: 21px;
     font-weight: bold;
     color: #23ec1c;
+    transition: all 1s;
   }
+  .card:hover .category {
+    color: #fff;
+    animation: showTextIcon 600ms linear;
+  }
+  @keyframes showTextIcon {
+    0% {
+      transform: scale(5, 5);
+      color: #fff;
+    }
+    50% {
+      transform: scale(8, 8);
+    }
+    100% {
+      transform: scale(1, 1);
+    }
+  }
+
   .card .description {
     font-size: 14px;
+    transition: all 400ms;
   }
+
+  .card:hover .description{
+    color:#fff;
+    animation: showDescription 800ms linear;
+  }
+
+  @keyframes showDescription{
+    0%{
+      transform: translateY(200%);
+    }
+    50%{
+      transform: scale(.5,.5);
+    }
+
+    99%{
+      transform:translateY(0);
+    }
+  }
+
+  .card:hover {
+    background-color: #000;
+  }
+
   /* LATERAL */
   #lateral {
     float: right;
@@ -752,7 +881,7 @@ aside h3 {
   }
 
   #social_network {
-    width: 55%;
+    width: 89%;
     height: 100%;
   }
   #social_network .twitter,
@@ -764,6 +893,10 @@ aside h3 {
 
   #social_network a {
     font-size: 320%;
+    text-align: left;
+    margin-top: 5%;
+    margin-left: 5%;
+    font-size: 180%;
   }
 
   /* ARTICLES */
@@ -847,7 +980,7 @@ aside h3 {
     border-bottom: none;
   }
 
-  #footer #browsers img{
+  #footer #browsers img {
     width: 14%;
   }
 }

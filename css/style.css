@@ -814,21 +814,21 @@ aside h3 {
     transition: all 400ms;
   }
 
-  .card:hover .description{
-    color:#fff;
+  .card:hover .description {
+    color: #fff;
     animation: showDescription 800ms linear;
   }
 
-  @keyframes showDescription{
-    0%{
+  @keyframes showDescription {
+    0% {
       transform: translateY(200%);
     }
-    50%{
-      transform: scale(.5,.5);
+    50% {
+      transform: scale(0.5, 0.5);
     }
 
-    99%{
-      transform:translateY(0);
+    99% {
+      transform: translateY(0);
     }
   }
 
@@ -884,6 +884,36 @@ aside h3 {
     width: 89%;
     height: 100%;
   }
+
+  #social_network .overlay {
+    /* display: none; */
+    position: absolute;
+    margin: -5% 0% 0% 6%;
+    padding: 0.5%;
+    height: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #2b3bea;
+    text-shadow: 1px 1px 1px #23ec1c;
+    border: 4px solid #23ec1c;
+    box-shadow: 1px 0 2px #0c1943;
+    background-color: #000;
+    transform: translateX(-80%);
+    opacity: 0;
+    transition: all 400ms;
+  }
+  #social_network div:hover .overlay {
+    /* display: block; */
+    opacity: 1;
+    transform: translateX(0%);
+    /* animation: networkAnimation 500ms linear; */
+  }
+  /* @keyframes networkAnimation {
+    0% {
+      transform: translateX(0%);
+    }
+  } */
+
   #social_network .twitter,
   #social_network .facebook,
   #social_network .youtube {
